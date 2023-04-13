@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     },
     imageContainer: {
         borderColor: '#070A52',
-        borderWidth: 3,
+        borderWidth: 2,
         borderRadius: 50,
         padding: 3
     },
