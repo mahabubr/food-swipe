@@ -23,7 +23,7 @@ const Category = () => {
 
     return (
         <FlatList horizontal data={icons} keyExtractor={item => item.id} renderItem={({ item }) =>
-            <TouchableOpacity onPress={() => route.navigate(`category/${item.id}`)} style={styles.container}>
+            <TouchableOpacity onPress={() => route.navigate(`Category`, { itemId: item.id })} style={styles.container}>
                 <Image style={styles.image} source={item.icon} />
             </TouchableOpacity>
 
