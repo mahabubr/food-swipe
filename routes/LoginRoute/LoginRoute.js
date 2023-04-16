@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { ForgetPassword, Login, SignUp } from '../../screen/Login/index'
 import HomeRoute from '../HomeRoute/HomeRoute'
 import CategoryItems from '../../screen/Home/Landing/CategoryItems/CategoryItems'
+import Item from '../../screen/Home/Landing/CategoryItems/Item/Item'
 
 const Stack = createNativeStackNavigator()
 
@@ -22,6 +23,7 @@ const LoginRoute = () => {
             <Stack.Screen name='ForgetPassword' component={ForgetPassword} />
             <Stack.Screen name='Home' component={HomeRoute} />
             <Stack.Screen name='Category' component={CategoryItems} />
+            <Stack.Screen name='Item' component={Item} />
         </Stack.Navigator>
     )
 }
