@@ -5,7 +5,8 @@ import styles from './Menu.style'
 import { reload } from '../../../constants/icons'
 import MenuCard from './MenuCard/MenuCard'
 
-const Menu = () => {
+const Menu = ({ search }) => {
+
 
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
@@ -13,7 +14,7 @@ const Menu = () => {
     const [menuItems, setMenuItems] = useState([])
     useEffect(() => {
 
-        fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=m')
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
             .then(res => res.json())
             .then(data => {
                 setLoading(false)

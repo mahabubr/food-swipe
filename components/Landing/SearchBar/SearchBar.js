@@ -3,10 +3,10 @@ import React from 'react'
 
 import styles from './searchBar.style'
 
-const SearchBar = () => {
+const SearchBar = ({ setSearch }) => {
     return (
         <View style={styles.container}>
-            <TextInput style={styles.inputField} placeholder='Search Here' />
+            <TextInput onChangeText={(text) => setSearch(text)} style={styles.inputField} placeholder='Search Here' />
         </View>
     )
 }

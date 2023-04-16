@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LandingHeader from '../../../components/Landing/LandingHeader/LandingHeader'
 
 import styles from './landing.style'
@@ -8,12 +8,15 @@ import Category from '../../../components/Landing/Category/Category'
 import Menu from '../../../components/Landing/Menu/Menu'
 
 const Landing = () => {
+
+    const [search, setSearch] = useState('')
+
     return (
         <ScrollView style={styles.container}>
             <LandingHeader></LandingHeader>
-            <SearchBar></SearchBar>
+            <SearchBar setSearch={setSearch}></SearchBar>
             <Category></Category>
-            <Menu></Menu>
+            <Menu search={search}></Menu>
         </ScrollView>
     )
 }
