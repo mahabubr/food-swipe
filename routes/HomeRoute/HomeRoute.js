@@ -13,6 +13,7 @@ const HomeRoute = () => {
             headerShown: false,
             tabBarStyle: {
                 backgroundColor: '#576CBC',
+                height: 70,
             },
             tabBarActiveTintColor: '#ffffff',
             tabBarInactiveTintColor: '#7286D3'
