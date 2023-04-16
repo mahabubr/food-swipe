@@ -5,7 +5,16 @@ const styles = StyleSheet.create({
         backgroundColor: '#E4DCCF',
         width: '45%',
         marginVertical: 10,
-        borderRadius: 8
+        borderRadius: 8,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+        elevation: 16,
+
     },
     image: {
         width: '100%',

@@ -7,14 +7,14 @@ import styles from './category.style'
 import { useNavigation } from '@react-navigation/native'
 
 const icons = [
-    { id: 1, icon: burger },
-    { id: 2, icon: chicken },
-    { id: 3, icon: chips },
-    { id: 4, icon: fastFood },
-    { id: 5, icon: french },
-    { id: 6, icon: kebab },
-    { id: 7, icon: pizza },
-    { id: 8, icon: soda },
+    { id: 'a', icon: burger },
+    { id: 'c', icon: chicken },
+    { id: 'e', icon: chips },
+    { id: 'm', icon: fastFood },
+    { id: 'v', icon: french },
+    { id: 'g', icon: kebab },
+    { id: 'o', icon: pizza },
+    { id: 's', icon: soda },
 ]
 
 const Category = () => {
