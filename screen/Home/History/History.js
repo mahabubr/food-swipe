@@ -4,7 +4,7 @@ import React from 'react'
 const History = () => {
     return (
         <View>
-            <Text>History</Text>
+            <Text>No History Here</Text>
         </View>
     )
 }
