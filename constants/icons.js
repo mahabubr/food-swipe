@@ -6,6 +6,7 @@ import burger from '../assets/icons/hamburger.png'
 import kebab from '../assets/icons/kebab.png'
 import pizza from '../assets/icons/pizza-slice.png'
 import soda from '../assets/icons/soda.png'
+import reload from '../assets/icons/reload.png'
 
 export {
     chips,
@@ -15,5 +16,6 @@ export {
     burger,
     kebab,
     pizza,
-    soda
+    soda,
+    reload
 }

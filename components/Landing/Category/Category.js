@@ -26,7 +26,6 @@ const Category = () => {
             <TouchableOpacity onPress={() => route.navigate(`Category`, { itemId: item.id })} style={styles.container}>
                 <Image style={styles.image} source={item.icon} />
             </TouchableOpacity>
-
         } />
     )
 }

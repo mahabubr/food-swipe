@@ -5,6 +5,7 @@ import styles from './landing.style'
 import SearchBar from '../../../components/Landing/SearchBar/SearchBar'
 import { ScrollView } from 'react-native'
 import Category from '../../../components/Landing/Category/Category'
+import Menu from '../../../components/Landing/Menu/Menu'
 
 const Landing = () => {
     return (
@@ -12,6 +13,7 @@ const Landing = () => {
             <LandingHeader></LandingHeader>
             <SearchBar></SearchBar>
             <Category></Category>
+            <Menu></Menu>
         </ScrollView>
     )
 }
