@@ -6,24 +6,36 @@ import 'react-native-gesture-handler';
 import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-expo';
 import { CLERK_PUBLISHABLE_KEY } from '@env'
 import HomeRoute from './routes/HomeRoute/HomeRoute';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import tokenCache from './clerk/tokenCache';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import CategoryItems from './screen/Home/Landing/CategoryItems/CategoryItems';
+// import Item from './screen/Home/Landing/CategoryItems/Item/Item';
 
-const Stack = createNativeStackNavigator()
+// const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
-    <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY}>
+    <ClerkProvider tokenCache={tokenCache} publishableKey={CLERK_PUBLISHABLE_KEY}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Login' screenOptions={{
-          headerShown: false
+        <SignedIn>
+          <HomeRoute />
+        </SignedIn>
+        <SignedOut>
+          <LoginRoute />
+        </SignedOut>
+
+        {/* <Stack.Navigator initialRouteName='Login' screenOptions={{
+          headerTitle: 'Food Swipe',
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#576CBC',
+          },
+          headerTintColor: '#fff'
         }}>
-          <Stack.Group>
-            <Stack.Screen component={HomeRoute} name='Home' />
-          </Stack.Group>
-          <Stack.Group>
-            <Stack.Screen component={LoginRoute} name='Login' />
-          </Stack.Group>
-        </Stack.Navigator>
+          <Stack.Screen name='Category' component={CategoryItems} />
+          <Stack.Screen name='Item' component={Item} />
+        </Stack.Navigator> */}
+
       </NavigationContainer>
     </ClerkProvider>
   );

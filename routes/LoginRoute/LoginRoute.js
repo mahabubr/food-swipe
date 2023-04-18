@@ -20,8 +20,6 @@ const LoginRoute = () => {
             <Stack.Screen name='Login' component={Login} />
             <Stack.Screen name='SignUp' component={SignUp} />
             <Stack.Screen name='ForgetPassword' component={ForgetPassword} />
-            <Stack.Screen name='Category' component={CategoryItems} />
-            <Stack.Screen name='Item' component={Item} />
         </Stack.Navigator>
     )
 }
