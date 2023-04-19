@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     },
     userTxt1: {
         textAlign: 'center',
-        fontSize: 16
+        fontSize: 16,
+        marginBottom: 10
     },
     settingInfo: {
         marginVertical: 20,

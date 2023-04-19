@@ -1,10 +1,21 @@
-import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, Image, ScrollView, TouchableOpacity, Button } from 'react-native'
 import React from 'react'
 
 import styles from './setting.style'
 import { profile } from '../../../constants/images'
+import { useAuth } from '@clerk/clerk-expo'
+import { useNavigation } from '@react-navigation/native'
 
 const Setting = () => {
+
+    const { isLoaded, signOut } = useAuth()
+    const Navigate = useNavigation()
+
+    if (!isLoaded) {
+        return null
+    }
+
+
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.title}>Settings</Text>
@@ -14,6 +25,11 @@ const Setting = () => {
                     <Text style={styles.userTxt}>Tony Stark</Text>
                     <Text style={styles.userTxt1}>tony@stark.com</Text>
                 </View>
+                <TouchableOpacity>
+                    <Button onPress={() => {
+                        signOut()
+                    }} title='Log Out' />
+                </TouchableOpacity>
             </View>
             <View style={styles.settingInfo}>
                 <TouchableOpacity>
